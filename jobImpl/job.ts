@@ -14,8 +14,12 @@ const outputFile = "./jobImpl/fetchedData/balances.json";
 
 async function fetchAndWriteData() {
     try {
+        log.info(`sending request to ${url}`);
         const response = await fetch(url);
         const data: any = {};
+        if (response.status !== 200) {
+            throw Error(await response.text());
+        }
         data.date = dayjs().format("YYYY-MM-DD HH:mm:ss");
         data.response = await response.json();
         fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));

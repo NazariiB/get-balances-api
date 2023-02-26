@@ -10,7 +10,7 @@ app.use(express.json())
 
 app.get('/balances/:address', async (req, res) => {
     const address: string = req.params.address;
-    
+
     log.info(`get /balances with address: ${address}`)
 
     try {
