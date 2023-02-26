@@ -1,0 +1,15 @@
+{
+  "date": "2023-02-26 11:32:39",
+  "response": {
+    "nativTokenBalance": 0,
+    "amountTokensWithBalance": 1,
+    "tokens": [
+      {
+        "symbol": "usdt",
+        "name": "Tether",
+        "balance": "100000000",
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      }
+    ]
+  }
+}
